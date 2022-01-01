@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {setUser} from "../../redux/actions/authActions";
-import { Hero, Paintings, TopArtist, Exclusive, Trending } from '../../components/pageComponents/Home'
+import { Hero, Paintings, TopArtist, Exclusive, Trending, Story } from '../../components/pageComponents/Home'
 import {DefaultTheme, ThemeProvider} from "react-atomize";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -21,9 +21,10 @@ function Home(props) {
         <ThemeProvider theme={theme}>
             <Hero />
             <Trending />
-            <TopArtist />
-            <Recents />
-            {/* <Paintings />*/}
+            <Story />
+            {/* <TopArtist /> */}
+            {/* <Recents /> */}
+            {/* <Paintings /> */}
 
         </ThemeProvider>
     )

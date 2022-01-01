@@ -21,6 +21,8 @@ import styles from "../../../styles/style";
 import Login from '../../pageComponents/login/Login';
 import Register from "../../pageComponents/login/Register";
 import ProfileInputs from "../modals/modalComponents/ProfileInputs";
+import logo from '../../../assets/images/god.png';
+
 
 const theme = {
     ...DefaultTheme,
@@ -41,15 +43,15 @@ export default function LoggedOutHeader() {
 
                 </Col>
                 <Col size={{xs: 1, lg: 1}}>
-                    <NavLink to="/"><Image
-                        src="./img/ar_grey.png"
-                        h="2rem"
+                    <NavLink to=""><Image
+                        src={logo}
+                        h="3rem"
                         w="auto"
                     />
                     </NavLink>
                 </Col>
 
-                <Col size={{xs: 3, lg: 6}}>
+                <Col size={{xs: 2, lg: 5}}>
 
                 </Col>
                 <Col size={{xs: 1, lg: 1}}>
@@ -68,6 +70,7 @@ export default function LoggedOutHeader() {
                         </Button>
                     </NavLink>
                 </Col>
+               
 
                 <Col size={{xs: 1, lg: 1}}>
                     <NavLink to={`${url}/contact_us`}><Button
@@ -79,10 +82,10 @@ export default function LoggedOutHeader() {
                         fontFamily="primary"
                         m={{r: "0.5rem"}}
                     >
-                        Contact
+                        Skin
                     </Button></NavLink>
                 </Col>
-                <Col size={{xs: 1, lg: 1}}>
+                <Col size={{xs: 1, lg: 2}}>
                     <NavLink to={`${url}/login`}>
                         <Button
                         bg="white"
@@ -92,7 +95,7 @@ export default function LoggedOutHeader() {
                         hoverShadow="2"
                         fontFamily="primary"
                     >
-                        Login
+                        Connect Wallet
                     </Button></NavLink>
                 </Col>
                 <Col size={{xs: 1, lg: 1}}>

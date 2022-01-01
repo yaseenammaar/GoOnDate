@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import useSearchSuggestions from "../../../hooks/useSearchSuggestions";
 import {useHistory} from "react-router-dom"
 import MainSearchBar from "../../molecules/search/MainSearchBar";
+import { Button } from "react-atomize";
 
 
 function Hero() {
@@ -16,43 +17,19 @@ function Hero() {
                 </div>
 
                 <div className="text-center content">
-                    <h1> Welcome to ArtBid</h1>
-                    <p>Online public auction platform</p>
-                        <MainSearchBar
-                            showSuggestions={showSuggestions}
-                            searchButtonOnClick={() => {
-                                history.push(`/search_result?searchText=${searchText}&method=search`)
-                            }}
+                    <h1>New Year Sale is Live!</h1>
+                    <p>Start your new year resolution</p>
 
-                            onClickSuggestion={(suggestion) => {
-                                history.push(`/search_result?searchText=${suggestion}&method=suggestion`)
-                            }}
-
-                            onFocusSearch={() => {
-                                search.result.length > 0? setShowSuggestions(true) : setShowSuggestions(false)
-                            }}
-
-                            onBlurSearch={() => {
-                                //setShowSuggestions(false)
-                            }}
-
-                            onChangeSearch={(e) => {
-                                setSearchText(e.target.value)
-                            }}
-
-                            closeDropdown={() => (
-                                setShowSuggestions(false)
-                            )}
-
-                            showDropdown={() => {
-                                setShowSuggestions(true)
-                            }}
-
-                            loading={search.loading}
-                            suggestions={search.result}
-                            error={search.error}
-
-                        />
+                    <center> 
+                        <Button
+                            
+                            bg="info700"
+                            hoverBg="info800"
+                            rounded="lg"
+                            m={{ r: "1rem" }}
+                        >
+                            Buy Now
+                        </Button></center>
 
                 </div>
             </section>

@@ -58,19 +58,10 @@ function Main(props) {
             :
             <ThemeProvider theme={theme}>
                 <HashRouter>
-                     {
-                        props.auth.user == null || props.auth.user.isAnonymous ?
+                   
                             <LoggedOutHeader/>
-                            :
-                            <LoggedInHeader/>
-
-                    }
                     <Switch>
-                        <RouteWithModals path="/profile" component={Profile}/>
-                        <RouteWithModals path={"/search_result"} component={SearchResultPage}/>
-                        <RouteWithModals path={"/art"} component={Art}/>
-                        <RouteWithModals path={"/artist"} component={Artist}/>
-                        <RouteWithModals path={"/myprofile"} component={MyProfile}/>
+                       
                         <RouteWithModals path="/" component={Home}/>
                     </Switch>
 

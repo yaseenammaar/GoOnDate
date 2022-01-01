@@ -1,11 +1,11 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDdfKp-PwCJ1uJ0fMzcF7DHXiyM1pPdFtA",
-    authDomain: "artbid-db-dev.firebaseapp.com",
-    projectId: "artbid-db-dev",
-    storageBucket: "artbid-db-dev.appspot.com",
-    messagingSenderId: "1036550423648",
-    appId: "1:1036550423648:web:66630a31f6d1c630ad2f05",
-    measurementId: "G-NQEBX82MRR"
-}
+    apiKey: "AIzaSyBMykJS9vTWj_LQboUo5uMAScVBQ44XjMw",
+    authDomain: "goondate-nft.firebaseapp.com",
+    projectId: "goondate-nft",
+    storageBucket: "goondate-nft.appspot.com",
+    messagingSenderId: "814813299738",
+    appId: "1:814813299738:web:3210d57605c17e88a77da3",
+    measurementId: "G-46TSTP6QXS"
+  };
 
 export default firebaseConfig

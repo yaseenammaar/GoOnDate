@@ -15,7 +15,7 @@ import {
 } from "react-atomize";
 import {NavLink} from "react-router-dom";
 
-import logo from '../../../assets/images/ar_grey.png';
+import logo from '../../../assets/images/god.png';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -39,39 +39,35 @@ export default function LoggedOutHeader() {
 
     return (
         <ThemeProvider theme={theme}>
-
-
-
-
-
                 <footer className="footer container-fluid">
                    
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <img className="footer-logo" src={logo}/>
+                            <img className="footer-logo" h="3rem" src={logo}/>
                         </div>
                         <div className="col-md-2 links">
                             <h5>Connect With us</h5>
                             
-                            <li><a href="#" >Instagram</a></li>
-                            <li><a href="#" >Facebook</a></li>
-                            <li><a href="#" >Twitter</a></li>
+                            <li><a href="https://instagram.com/goondate.nft?utm_medium=copy_link" >Instagram</a></li>
+                            <li><a href="https://twitter.com/GoOnDate" >Twitter</a></li>
+                            <li><a href="https://www.linkedin.com/in/go-on-date-nft-b8b539229/" >LinkedIn</a></li>
+                            <li><a href="https://discord.gg/h95hWP2V" >Discord</a></li>
+                            <li><a href="https://in.pinterest.com/GoOnDate/_saved/" >Pinterest</a></li>
+                            <li><a href="https://t.me/GoOnDateNFT" >Telegram</a></li>
+                            <li><a href="https://www.reddit.com/user/GoOnDate/" >Reddit</a></li>
+                            
                         </div>
                         <div className="col-md-2 links">
                             <h5>Get to Know Us</h5>
-                            <li><a href="#" >About Us </a></li>
+                            <li><a href="#" >About Us</a></li>
                             {/* <li><a href="#" >Careers</a></li>
                             <li><a href="#" >Press Releases</a></li> */}
                         </div>
-                        <div className="col-md-2 links">
-                            <h5>Learn</h5>
-                            <li><a href="#" >To Sell </a></li>
-                            <li><a href="#" >To Bid</a></li>
-                        </div>
+                       
                     </div>
 
-                        <p className="copyright">© 2021 ArtBid</p>
+                        <p className="copyright">© 2021 GoOnDate</p>
 
                 </div>
              
