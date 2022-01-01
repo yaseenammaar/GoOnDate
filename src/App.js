@@ -36,6 +36,9 @@ const theme = {
     }
 };
 
+const isPhantomInstalled = window.solana && window.solana.isPhantom
+
+
 
 
 function Main(props) {
