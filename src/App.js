@@ -63,6 +63,9 @@ function Main(props) {
                     <Switch>
                        
                         <RouteWithModals path="/" component={Home}/>
+                        <RouteWithModals path={"/artist"} component={Artist}/>
+                        <RouteWithModals path={"/myprofile"} component={MyProfile}/>
+                        <RouteWithModals path="/" component={Home}/>
                     </Switch>
 
                     <Footer/>

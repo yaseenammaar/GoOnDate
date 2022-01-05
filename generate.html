@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@360&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<a href="" style="font-family: 'Josefin Sans'" id="date"></a>
+
+	<canvas id="canvas">
+		
+	</canvas>
+	<img src="m.png">
+</body>
+</html>
+
+
+<script>
+	
+$(document).ready(function(){
+	  const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+        const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+        "Saturday","Sunday"];
+        var i = 0;
+        var j = 0;
+        
+	setInterval(function(){
+		
+
+		 const dateObj = new Date("Jan 01, 1900");
+
+	dateObj.setDate(dateObj.getDate()+i);
+
+    const month = monthNames[dateObj.getMonth()];
+    const day = String(dateObj.getDate()).padStart(2, '0');
+    const year = dateObj.getFullYear();
+    const output = day + " " + month  + " " + year;
+   
+
+var canvas = document.getElementById("canvas");
+
+// $("#date").html(output);
+
+canvas.width = 500;
+canvas.height = 500;
+
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+ctx.fillStyle = "black";
+
+ctx.font = "30px 'Josefin Sans'";
+ctx.fontStyle="white";
+ctx.textAlign="center";
+ctx.fillText(output, canvas.width/2, (canvas.height/2)+10);
+ctx.font = "28px 'Josefin Sans'";
+ 
+ctx.fillText(dayNames[j%7], canvas.width-100, canvas.height-48);
+// ctx.fillStyle = "blue";
+var url = canvas.toDataURL();
+
+var a = document.createElement('a');
+a.download = i + ' - ' + output+'.png';
+a.href = url;
+a.textContent = '';
+j++;
+i++;
+
+if(i<40){
+a.click();	
+}
+
+
+document.body.appendChild(a);
+
+
+
+}, 500);
+
+});
+
+
+</script>
