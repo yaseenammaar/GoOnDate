@@ -4,10 +4,13 @@ import React from "react";
 const isPhantomInstalled = window.solana && window.solana.isPhantom
 console.log("Phanstom installed:" + isPhantomInstalled);
 var key;
+
 async function establishConnection(){
+    console.log("-------------------------------------------------------");
     try {
         const resp = await window.solana.connect();
         key = resp.publicKey.toString()
+        window.localStorage.setItem("walletAddress", key);
         // 26qv4GCcx98RihuK3c4T6ozB3J7L6VwCuFVc7Ta2A3Uo 
     } catch (err) {
         console.log("ERROR:" + err);
@@ -18,16 +21,11 @@ async function establishConnection(){
 establishConnection();
 
 
+export default (
+    <Div>
 
-function AboutUs(props) {
-    return(
-        <Div>
+        <Text>Wallet Connected </Text>
+        <Text>Wallet Id: {key} </Text>
 
-            <Text>Wallet Connected </Text>
-            <Text>Wallet Id: {key} </Text>
-
-        </Div>
-    )
-}
-
-export default AboutUs
+    </Div>
+)

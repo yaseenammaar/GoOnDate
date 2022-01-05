@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import {ReactSession} from 'react-client-session';
+
 import {
     ThemeProvider,
     Div,
@@ -32,6 +34,25 @@ const theme = {
         gutterWidth: 0
     }
 };
+
+var urlAddress;
+var text;
+
+function checkWalletConnected(){
+    console.log(localStorage.getItem("walletAddress"));
+    if(localStorage.getItem("walletAddress")){
+        urlAddress = "desconnectwallet";
+        text = "Desconnect Wallet";
+    }
+    else{
+        urlAddress = "connectwallet";
+        text = "Connect Wallet";
+
+    }
+}
+
+checkWalletConnected()
+
 export default function LoggedOutHeader() {
     const { url } = useRouteMatch()
 
@@ -85,8 +106,8 @@ export default function LoggedOutHeader() {
                         Skin
                     </Button></NavLink>
                 </Col>
-                <Col size={{xs: 1, lg: 2}}>
-                    <NavLink to={`${url}/connectwallet`}>
+                    <Col size={{xs: 1, lg: 2}}>
+                    <NavLink to={`${url}/${urlAddress}`}>
                         <Button
                         bg="white"
                         textColor="gray900"
@@ -95,7 +116,7 @@ export default function LoggedOutHeader() {
                         hoverShadow="2"
                         fontFamily="primary"
                     >
-                        Connect Wallet
+                        {text}
                     </Button></NavLink>
                 </Col>
                 <Col size={{xs: 1, lg: 1}}>
