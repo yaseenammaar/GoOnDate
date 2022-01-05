@@ -18,14 +18,17 @@ async function establishConnection(){
     }
 }
 
-establishConnection();
 
 
-export default (
-    <Div>
+function render(){
+    establishConnection();
+    return (<Div>
 
         <Text>Wallet Connected </Text>
         <Text>Wallet Id: {key} </Text>
 
-    </Div>
-)
+    </Div>);
+}
+
+
+export default render
