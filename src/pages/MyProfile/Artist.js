@@ -38,7 +38,6 @@ function MyProfile(props) {
 
     return (
         <>
-
         <Modal 
                 isOpen={isOpenEdit} 
                 onClose={closeEdit} 

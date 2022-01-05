@@ -7,20 +7,11 @@ import More from "./modalComponents/More";
 import Notifications from "./modalComponents/Notifications";
 import Messages from "./modalComponents/Messages";
 import ConnectWallet from "./modalComponents/ConnectWallet";
-import DesconnectWallet from "./modalComponents/DesconnectWallet";
 
 export default [
     {
-        name: "login",
-        component: (props) => (<WithModalWrapper {...props} ><PhoneAuth /></WithModalWrapper>)
-    },
-    {
         name: "connectwallet",
         component: (props) => (<WithModalWrapper {...props} ><ConnectWallet /></WithModalWrapper>)
-    },
-    {
-        name: "desconnectwallet",
-        component: (props) => (<WithModalWrapper {...props} ><DesconnectWallet /></WithModalWrapper>)
     },
     {
         name: "complete_profile",

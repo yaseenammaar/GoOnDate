@@ -86,7 +86,7 @@ export default function LoggedOutHeader() {
                     </Button></NavLink>
                 </Col>
                 <Col size={{xs: 1, lg: 2}}>
-                    <NavLink to={`${url}/login`}>
+                    <NavLink to={`${url}/connectwallet`}>
                         <Button
                         bg="white"
                         textColor="gray900"

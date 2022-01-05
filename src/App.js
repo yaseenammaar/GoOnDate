@@ -7,6 +7,7 @@ import RouteWithModals from "./components/atoms/RouteWithModals";
 import Profile from "./pages/Profile";
 import Artist from "./pages/Artist/Artist";
 import MyProfile from "./pages/MyProfile/Artist";
+import ConnectWallet from "./pages/connectWallet";
 import { connect } from "react-redux"
 import firebaseInstance from "./Firebase/index"
 
@@ -63,10 +64,9 @@ function Main(props) {
                    
                             <LoggedOutHeader/>
                     <Switch>
-                       
-                        <RouteWithModals path="/" component={Home}/>
                         <RouteWithModals path={"/artist"} component={Artist}/>
                         <RouteWithModals path={"/myprofile"} component={MyProfile}/>
+                        <RouteWithModals path={"/connectwallet"} component={ConnectWallet}/>
                         <RouteWithModals path="/" component={Home}/>
                     </Switch>
 
