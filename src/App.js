@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Sniff Labs LLC. All rights reserved.
 import React, {useEffect, useState} from "react";
 import LoggedOutHeader from "./components/molecules/navbar/LoggedOutHeader";
 import LoggedInHeader from "./components/molecules/navbar/LoggedInHeader";
